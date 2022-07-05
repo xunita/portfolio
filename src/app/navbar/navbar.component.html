@@ -1,0 +1,35 @@
+<div class="flex items-center justify-between navbar w-full sm:px-24 px-8 bg-black">
+    <a href="/#" class="text-white text-3xl font-bold title">
+        <span>X</span>
+        <span>u</span>
+        <span>n</span>
+        <span>i</span>
+        <span>t</span>
+        <span>a</span>
+    </a>
+    <div class="flex items-center space-x-8 sm:block hidden self-end text-sm">
+        <a href="#about" class="text-white inline-block bottom-glow fromLeft">About</a>
+        <a href="#tries" class="text-white inline-block bottom-glow fromLeft">Tries</a>
+        <a href="#now" class="text-white inline-block bottom-glow fromLeft">Now</a>
+        <a href="#contact" class="text-white inline-block bottom-glow fromLeft">Contact me</a>
+    </div>
+    <div appClickoutside (onClickOutside)="onClickOutside()" class="sm:hidden block relative self-end flex flex-col">
+        <span class="cursor-pointer block" (click)="closeOpenMenu()">
+            <svg class="w-6 h-6 text-white text-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </span>
+        <div ng-show="!burger" [ngClass]="{'is-open': burger, 'is-hid' : !burger }" class="drawer absolute burger-menu top-10 right-0 self-end 
+            rounded-md bg-black w-56 border-4 border-glow py-4">
+            <div class="flex items-center flex-col space-y-8 self-end text-sm">
+                <a href="#about" (click)="hideMenu1s()" class="text-white inline-block bottom-glow fromLeft">About</a>
+                <a href="#tries" (click)="hideMenu1s()" class="text-white inline-block bottom-glow fromLeft">Tries</a>
+                <a href="#now" (click)="hideMenu1s()" class="text-white inline-block bottom-glow fromLeft">Now</a>
+                <a href="#contact" (click)="hideMenu1s()" class="text-white inline-block bottom-glow fromLeft">Contact
+                    me</a>
+            </div>
+        </div>
+    </div>
+</div>

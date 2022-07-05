@@ -1,0 +1,8 @@
+/* The root component styles */
+.root {
+    background-image: url('~src/assets/images/xunita.jpg');
+}
+
+/* .root-child {
+    height: 2000px !important;
+} */

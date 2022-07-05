@@ -1,0 +1,38 @@
+<div class="border-4 rounded-md border-glow max747-70 w-full p-8">
+    <div class="flex flex-col space-y-8">
+        <span class="text-white text-3xl block font-bold">Tries</span>
+        <div class="flex flex-col space-y-1">
+            <span class="text-white text-lg block font-semibold">Here are the works I have spent time on, some are
+                finished, some are not, some work, some don't.</span>
+        </div>
+        <div class="w-full">
+            <div class="flex justify-between space-x-2">
+                <button (click)="decrement(index)"><svg class="w-10 h-10 text-glow-2 text-white white-force" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
+                            clip-rule="evenodd"></path>
+                    </svg></button>
+                <div class="flex flex-col space-y-3 items-center">
+                    <a [href]="projects[index].link" target="_blank" class="sm:h-48 h-full sm:w-96 w-full border-4 border-glow-2 rounded image">
+                        <p class="text-white w-full h-full">
+                            <img src="{{projects[index].image}}" class="w-full h-full">
+                        </p>
+                    </a>
+                    <div class="flex space-x-2">
+                        <span (click)="setProject(i)" *ngFor="let i of length" [ngClass]="{'bg-white': index !== i, 'bg-glow': index === i}"
+                            class="ads-dot text-white cursor-pointer hover:bg-gray-300 rounded-full"></span>
+                    </div>
+                    <span class="text-white text-sm block font-semibold text-glow-2 text-center self-center">
+                        {{projects[index].name}}, {{projects[index].description}}</span>
+                </div>
+                <button (click)="increment(index)"><svg class="w-10 h-10 text-glow-2 text-white white-force" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg></button>
+            </div>
+        </div>
+    </div>
+</div>
