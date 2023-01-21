@@ -19,6 +19,18 @@ export class TriesComponent implements OnInit {
     image: "/assets/images/ofaloocms.png",
     link: "https://ofalooagent.netlify.app/"
   },
+              {
+    name: "Kylie Cosmetic Shop",
+    description: "Homepage of Kylie Jenner Cosmetic website",
+    image: "/assets/images/kcs.png",
+    link: "https://kcshops.netlify.app/"
+  },
+              {
+    name: "Pincasse",
+    description: "Pincasse is an attempt of website for coding ressources(all sort)",
+    image: "/assets/images/pincasse.png",
+    link: "https://pincasse.netlify.app/home/"
+  },
   {
     name: "Average",
     description: "Website for average simulation",
